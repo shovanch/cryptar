@@ -1,22 +1,29 @@
 /* Global Imports */
 @font-face {
-  font-display: fallback;
-  font-family: "Inter UI";
+  font-family: "TT Commons";
   font-style: normal;
-  font-weight: 400;
-  src: url("../assets/fonts/Inter-Regular.woff2") format("woff2"), url("../assets/fonts/Inter-Regular.woff2") format("woff"); }
+  font-weight: bold;
+  src: url("../assets/fonts/TTCommons-Bold.woff") format("woff"), url("../assets/fonts/TTCommons-Bold.ttf") format("truetype"); }
 
 @font-face {
-  font-display: fallback;
-  font-family: "Inter UI";
+  font-family: "TT Commons";
   font-style: normal;
-  font-weight: 600;
-  src: url("../assets/fonts/Inter-SemiBold.woff2") format("woff2"), url("../assets/fonts/Inter-SemiBold.woff") format("woff"); }
+  font-weight: 500;
+  src: url("../assets/fonts/TTCommons-Medium.woff") format("woff"), url("../assets/fonts/TTCommons-Medium.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Apercu-medium";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../assets/fonts/Apercu-Medium.woff") format("woff"), url("../assets/fonts/Apercu-Medium.ttf") format("truetype"); }
 
 :root {
-  --bg-color: #e0e2e2;
+  --bg-color: #f0f6fb;
   --primary-text-color: #000;
-  --primary-font: "Inter UI", Arial, "Helvetica Neue", Helvetica, sans-serif; }
+  --primary-font: "TT Commons", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --secondary-font: "Apercu-medium", Arial, "Helvetica Neue", Helvetica,
+    sans-serif;
+  --logo-font: "Karla", sans-serif; }
 
 /* -- Base Styles  ---------- */
 html {
@@ -51,6 +58,7 @@ body {
 a,
 a:link,
 a:visited {
+  color: inherit;
   cursor: pointer;
   text-decoration: none; }
 
@@ -58,5 +66,99 @@ ul,
 li {
   list-style: none; }
 
-h1 {
-  font-size: 4rem; }
+/* BODY */
+body {
+  background-color: var(--bg-color); }
+
+.container {
+  display: flex;
+  max-width: 1140px;
+  min-height: 100vh;
+  flex-direction: column;
+  padding-top: 3.2rem;
+  margin: 0 auto; }
+
+.main-container {
+  margin: 6rem 0; }
+
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .header-logo {
+    font-family: var(--logo-font);
+    font-size: 4.8rem;
+    letter-spacing: -0.08em; }
+  .header-search {
+    display: flex;
+    flex: 0 0 35%;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff; }
+  .header-search-input {
+    width: 100%;
+    padding: 1.5rem 1.8rem;
+    border: none;
+    border-radius: 7px;
+    color: rgba(0, 0, 0, 0.5);
+    font-family: var(--primary-font);
+    font-size: 2rem;
+    font-weight: 500; }
+
+/* TABLE */
+.table {
+  width: 100%;
+  align-self: center;
+  padding: 0 1rem;
+  border-collapse: separate;
+  border-spacing: 0 1rem; }
+  .table th {
+    color: #111;
+    font-size: 1.8rem;
+    font-weight: 500; }
+
+.table-body tr {
+  cursor: pointer; }
+
+.table-body td {
+  padding: 2.2rem 1rem;
+  color: #000;
+  font-family: var(--secondary-font);
+  font-size: 2rem;
+  text-align: center; }
+
+.table-body tr {
+  padding: 2.5rem 1rem;
+  background-color: #fff;
+  border-radius: 5px; }
+
+.pagination {
+  display: flex;
+  height: 4.5rem;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  font-size: 1.8rem; }
+  .pagination-button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #000;
+    cursor: pointer;
+    font-family: var(--secondary-font);
+    font-weight: 700; }
+  .pagination-info {
+    margin: 0 2rem;
+    font-weight: 900; }
+
+/* FOOTER */
+.footer {
+  padding: 2.2rem 0;
+  border-top: 1px solid #777;
+  text-align: center; }
+  .footer-links {
+    margin-top: 1.8rem; }
+  .footer a {
+    font-size: 2rem; }

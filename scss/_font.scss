@@ -1,17 +1,22 @@
 @font-face {
-  font-display: fallback;
-  font-family: "Inter UI";
+  font-family: "TT Commons";
   font-style: normal;
-  font-weight: 400;
-  src: url("../assets/fonts/Inter-Regular.woff2") format("woff2"),
-    url("../assets/fonts/Inter-Regular.woff2") format("woff");
+  font-weight: bold;
+  src: url("../assets/fonts/TTCommons-Bold.woff") format("woff"),
+    url("../assets/fonts/TTCommons-Bold.ttf") format("truetype");
 }
 
 @font-face {
-  font-display: fallback;
-  font-family: "Inter UI";
+  font-family: "TT Commons";
   font-style: normal;
-  font-weight: 600;
-  src: url("../assets/fonts/Inter-SemiBold.woff2") format("woff2"),
-    url("../assets/fonts/Inter-SemiBold.woff") format("woff");
+  font-weight: 500;
+  src: url("../assets/fonts/TTCommons-Medium.woff") format("woff"),
+    url("../assets/fonts/TTCommons-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Apercu-medium";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../assets/fonts/Apercu-Medium.woff") format("woff"),
+    url("../assets/fonts/Apercu-Medium.ttf") format("truetype");
 }

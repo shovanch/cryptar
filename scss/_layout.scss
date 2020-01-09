@@ -1,3 +1,125 @@
-h1 {
-  font-size: 4rem;
+/* BODY */
+body {
+  background-color: var(--bg-color);
 }
+.container {
+  display: flex;
+  max-width: 1140px;
+  min-height: 100vh;
+  flex-direction: column;
+  padding-top: 3.2rem;
+  margin: 0 auto;
+}
+.main-container {
+  margin: 6rem 0;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &-logo {
+    font-family: var(--logo-font);
+    font-size: 4.8rem;
+    letter-spacing: -0.08em;
+  }
+
+  &-search {
+    display: flex;
+    flex: 0 0 35%;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    // box-shadow: 0px 4px 30px #e0e0e0;
+  }
+
+  &-search-input {
+    width: 100%;
+    padding: 1.5rem 1.8rem;
+    border: none;
+    border-radius: 7px;
+    color: rgba(0, 0, 0, 0.5);
+    font-family: var(--primary-font);
+    font-size: 2rem;
+    font-weight: 500;
+  }
+}
+/* TABLE */
+.table {
+  width: 100%;
+  align-self: center;
+  padding: 0 1rem;
+  border-collapse: separate;
+  border-spacing: 0 1rem;
+
+  & th {
+    color: #111;
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+}
+
+.table-body {
+  & tr {
+    cursor: pointer;
+  }
+
+  & td {
+    // height: 3rem;
+    // padding: 3.5rem 1rem;
+    padding: 2.2rem 1rem;
+    color: #000;
+    font-family: var(--secondary-font);
+    font-size: 2rem;
+    text-align: center;
+  }
+  & tr {
+    padding: 2.5rem 1rem;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+}
+
+.pagination {
+  display: flex;
+  height: 4.5rem;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  font-size: 1.8rem;
+
+  &-button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #000;
+    cursor: pointer;
+    font-family: var(--secondary-font);
+    font-weight: 700;
+  }
+
+  &-info {
+    margin: 0 2rem;
+    font-weight: 900;
+  }
+}
+
+/* FOOTER */
+.footer {
+  padding: 2.2rem 0;
+  border-top: 1px solid #777;
+  text-align: center;
+  &-links {
+    margin-top: 1.8rem;
+  }
+  a {
+    font-size: 2rem;
+  }
+}
+
+// * {
+//   outline: 1px solid red;
+// }

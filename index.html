@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Karla:700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/normalize.min.css" />
     <!-- User stylesheets -->
     <link rel="stylesheet" href="css/style.css" />
@@ -12,8 +16,141 @@
   </head>
 
   <body>
-    <h1>Hello World! Yoho</h1>
-    <img src="assets/images/placeholder.jpg" alt="A cute puppy" />
-    <p>This is just a placeholder image</p>
+    <div class="container">
+      <header class="header">
+        <a href="/" class="header-logo">CrypTr.</a>
+        <form class="header-search">
+          <input
+            type="text"
+            name="coinname"
+            class="header-search-input"
+            placeholder="Search cryptocurrency"
+          />
+        </form>
+        <a href="/" class="header-logo">CrypTr.</a>
+      </header>
+
+      <main class="main-container">
+        <table class="table">
+          <thead class="table-header">
+            <tr>
+              <th>#</th>
+              <th>Symbol</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Market Cap</th>
+              <th>Change 1H</th>
+              <th>Change 24H</th>
+            </tr>
+          </thead>
+          <tbody class="table-body">
+            <tr class="table-row">
+              <td>#1</td>
+              <td>BTC</td>
+              <td>Bitcoin</td>
+              <td>$7910.592</td>
+              <td>$143,582,185,851</td>
+              <td><span class="percent-down">-0.47%</span></td>
+              <td><span class="percent-down">-5.15%</span></td>
+            </tr>
+            <tr class="table-row">
+              <td>#2</td>
+              <td>ETH</td>
+              <td>Ethereum</td>
+              <td>$138.537</td>
+              <td>$15,129,141,040</td>
+              <td><span class="percent-down">-0.21%</span></td>
+              <td><span class="percent-down">-2.97%</span></td>
+            </tr>
+            <tr class="table-row">
+              <td>#3</td>
+              <td>XRP</td>
+              <td>XRP</td>
+              <td>$0.205</td>
+              <td>$8,881,471,139</td>
+              <td><span class="percent-down">-0.71%</span></td>
+              <td><span class="percent-down">-2.97%</span></td>
+            </tr>
+            <tr class="table-row">
+              <td>#4</td>
+              <td>XRP</td>
+              <td>XRP</td>
+              <td>$0.205</td>
+              <td>$8,881,471,139</td>
+              <td><span class="percent-down">-0.71%</span></td>
+              <td><span class="percent-down">-2.97%</span></td>
+            </tr>
+            <tr class="table-row">
+              <td>#5</td>
+              <td>XRP</td>
+              <td>XRP</td>
+              <td>$0.205</td>
+              <td>$8,881,471,139</td>
+              <td><span class="percent-down">-0.71%</span></td>
+              <td><span class="percent-down">-2.97%</span></td>
+            </tr>
+            <tr class="table-row">
+              <td>#6</td>
+              <td>XRP</td>
+              <td>XRP</td>
+              <td>$0.205</td>
+              <td>$8,881,471,139</td>
+              <td><span class="percent-down">-0.71%</span></td>
+              <td><span class="percent-down">-2.97%</span></td>
+            </tr>
+            <tr class="table-row">
+              <td>#7</td>
+              <td>XRP</td>
+              <td>XRP</td>
+              <td>$0.205</td>
+              <td>$8,881,471,139</td>
+              <td><span class="percent-down">-0.71%</span></td>
+              <td><span class="percent-down">-2.97%</span></td>
+            </tr>
+            <tr class="table-row">
+              <td>#8</td>
+              <td>XRP</td>
+              <td>XRP</td>
+              <td>$0.205</td>
+              <td>$8,881,471,139</td>
+              <td><span class="percent-down">-0.71%</span></td>
+              <td><span class="percent-down">-2.97%</span></td>
+            </tr>
+            <tr class="table-row">
+              <td>#9</td>
+              <td>XRP</td>
+              <td>XRP</td>
+              <td>$0.205</td>
+              <td>$8,881,471,139</td>
+              <td><span class="percent-down">-0.71%</span></td>
+              <td><span class="percent-down">-2.97%</span></td>
+            </tr>
+            <tr class="table-row">
+              <td>#10</td>
+              <td>XRP</td>
+              <td>XRP</td>
+              <td>$0.205</td>
+              <td>$8,881,471,139</td>
+              <td><span class="percent-down">-0.71%</span></td>
+              <td><span class="percent-down">-2.97%</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="pagination">
+          <button class="pagination-button" disabled>←</button
+          ><span class="pagination-info">Page 1</span
+          ><button class="pagination-button">→</button>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <h1>Made by Shovan Chatterjee</h1>
+        <div class="footer-links">
+          <a href="#">Github</a>
+          <a href="#">Twitter</a>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
