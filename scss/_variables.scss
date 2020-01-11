@@ -6,3 +6,9 @@
     sans-serif;
   --logo-font: "Karla", sans-serif;
 }
+
+@media screen and (max-width: 1140px) {
+  .container {
+    padding: 0 5%;
+  }
+}

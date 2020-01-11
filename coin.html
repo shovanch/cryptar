@@ -20,32 +20,148 @@
       <header class="header">
         <a href="/" class="header-logo">CrypTr.</a>
         <form class="header-search">
+          <button class="header-search__button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-search"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
           <input
             type="text"
-            name="coinname"
-            class="header-search-input"
+            class="header-search__input"
             placeholder="Search cryptocurrency"
           />
+          <!-- name="coinname" -->
         </form>
-        <a href="/" class="header-logo">CrypTr.</a>
+        <button class="mode-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-sun"
+          >
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
       </header>
 
       <main class="main-container">
         <button class="btn-back" disabled>&#10229; Go back</button>
-        <h1 class="coin-name">bitcoin</h1>
+        <div class="coin-header">
+          <img
+            src="./assets/images/coin.png"
+            alt="coin logo"
+            class="coin-logo"
+          />
+          <h1 class="coin-name">bitcoin</h1>
+        </div>
 
         <div class="coin-detail">
           <div class="coin-detail__box">
             <h3 class="coin-detail__box-label">Rank</h3>
             <h1 class="coin-detail__box-info">1</h1>
+            <!-- <img
+              class="coin-detail__box-img"
+              src="./assets/images/rank.svg"
+              alt=""
+            /> -->
+            <svg
+              class="coin-detail__box-img "
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#666"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-award"
+            >
+              <circle cx="12" cy="8" r="7"></circle>
+              <polyline
+                points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"
+              ></polyline>
+            </svg>
           </div>
           <div class="coin-detail__box coin-detail__box--middle">
             <h3 class="coin-detail__box-label">Current Price</h3>
             <h1 class="coin-detail__box-info">$100,525,213</h1>
+            <!-- <img
+              class="coin-detail__box-img"
+              src="./assets/images/price.svg"
+              alt=""
+            /> -->
+            <svg
+              class="coin-detail__box-img "
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#666"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-award"
+            >
+              <circle cx="12" cy="8" r="7"></circle>
+              <polyline
+                points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"
+              ></polyline>
+            </svg>
           </div>
           <div class="coin-detail__box">
             <h3 class="coin-detail__box-label">Change 24H</h3>
             <h1 class="coin-detail__box-info">-24%</h1>
+            <!-- <img
+              class="coin-detail__box-img"
+              src="./assets/images/share.svg"
+              alt=""
+            /> -->
+            <svg
+              class="coin-detail__box-img "
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#999"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-award"
+            >
+              <circle cx="12" cy="8" r="7"></circle>
+              <polyline
+                points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"
+              ></polyline>
+            </svg>
           </div>
         </div>
 
