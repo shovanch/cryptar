@@ -1,0 +1,14 @@
+:root {
+  --bg-color: #f0f6fb;
+  --primary-text-color: #000;
+  --primary-font: "TT Commons", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --secondary-font: "Apercu-medium", Arial, "Helvetica Neue", Helvetica,
+    sans-serif;
+  --logo-font: "Karla", sans-serif;
+}
+
+@media screen and (max-width: 1140px) {
+  .container {
+    padding: 0 5%;
+  }
+}
