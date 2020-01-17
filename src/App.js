@@ -6,6 +6,7 @@ import Footer from "components/common/Footer";
 import HomeView from "components/HomeView";
 import CoinView from "components/CoinView";
 import Error from "components/Error";
+import Loading from "components/Loading";
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
               {/* <Route path="/currency/:id" component={Detail} exact /> */}
               <Route path="/currency" component={CoinView} exact />
               <Route path="/notfound" component={Error} exact />
+              <Route path="/load" component={Loading} exact />
               <Route component={Error} />
             </Switch>
           </div>
