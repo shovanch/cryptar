@@ -8,7 +8,7 @@ import Search from "../Search";
 const Header = () => (
   <header className="header">
     <Link to="/" className="header-logo">
-      CrypTr.
+      CrypTra.
     </Link>
     <Search />
     <button type="button" className="mode-button">
