@@ -12,8 +12,6 @@ const HomeView = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(null);
 
-  //https://api.nomics.com/v1/currencies/ticker?key=2018-09-demo-dont-deploy-b69315e440beb145&ids=BTC,ETH,XRP&interval=1d,30d&convert=EUR
-
   useEffect(() => {
     const fetchCurrencies = () => {
       setIsLoading(true);

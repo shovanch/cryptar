@@ -24,16 +24,28 @@ const Table = ({ currencies, history }) => (
           <td>{currency.rank}</td>
           <td>{currency.symbol}</td>
           <td>{currency.name}</td>
-          <td>${currency.price}</td>
-          <td>${currency.market_cap}</td>
+          <td>
+            $
+            {Intl.NumberFormat({
+              minimumFractionDigits: 2
+            }).format(currency.price)}
+          </td>
+          {/* <td>${Number.parseFloat(currency.price).toFixed(3)}</td> */}
+          <td>
+            $
+            {Intl.NumberFormat({
+              minimumFractionDigits: 2
+            }).format(currency.market_cap)}
+          </td>
+          {/* <td>${Number.parseFloat(currency.market_cap).toFixed(3)}</td> */}
           <td>
             <span className="percent-down">
-              {currency["1d"].price_change_pct}
+              {currency["1d"].price_change_pct}%
             </span>
           </td>
           <td>
             <span className="percent-down">
-              {currency["30d"].price_change_pct}
+              {currency["30d"].price_change_pct}%
             </span>
           </td>
         </tr>

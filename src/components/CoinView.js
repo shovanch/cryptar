@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
 import axios from "axios";
 import CoinInfo from "components/CoinInfo";
 import Loading from "components/Loading";
@@ -38,20 +40,12 @@ const CoinView = ({ match }) => {
 
   return (
     <>
-      <button type="button" className="btn-back" disabled>
+      <Link to="/" className="btn-back">
         &#10229; Go back
-      </button>
+      </Link>
       {currency.length > 0 && <CoinInfo currency={currency} />}
     </>
   );
 };
-// (
-//   <>
-//     <button type="button" className="btn-back" disabled>
-//       &#10229; Go back
-//     </button>
-//     <CoinInfo />
-//   </>
-// );
 
 export default CoinView;
