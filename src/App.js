@@ -5,7 +5,7 @@ import Header from "components/common/Header";
 import Footer from "components/common/Footer";
 import HomeView from "components/HomeView";
 import CoinView from "components/CoinView";
-import Error from "components/Error";
+import NotFound from "components/NotFound";
 import Loading from "components/Loading";
 
 class App extends Component {
@@ -18,8 +18,8 @@ class App extends Component {
             <Switch>
               <Route path="/" component={HomeView} exact />
               {/* <Route path="/currency/:id" component={Detail} exact /> */}
-              <Route path="/currency" component={CoinView} exact />
-              <Route path="/notfound" component={Error} exact />
+              <Route path="/currency/:id" component={CoinView} exact />
+              <Route path="/notfound" component={NotFound} exact />
               <Route path="/load" component={Loading} exact />
               <Route component={Error} />
             </Switch>

@@ -1,6 +1,6 @@
 import React from "react";
 import error from "../assets/images/error.png";
-const Error = () => (
+const NotFound = () => (
   <div className="error">
     <div className="error-text">
       <h1>PAGE NOT FOUND!</h1>
@@ -11,4 +11,4 @@ const Error = () => (
   </div>
 );
 
-export default Error;
+export default NotFound;

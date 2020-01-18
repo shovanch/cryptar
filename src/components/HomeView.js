@@ -4,6 +4,7 @@ import axios from "axios";
 import Table from "components/Table";
 import Pagination from "components/Pagination";
 import Loading from "components/Loading";
+import NotFound from "components/NotFound";
 import { API_URL, API_KEY } from "../config";
 
 const HomeView = () => {
@@ -33,10 +34,11 @@ const HomeView = () => {
     fetchCurrencies();
   }, []);
 
+  if (isError) return <NotFound />;
+
   return (
     <>
-      {isLoading ? <Loading /> : <Table />}
-
+      {isLoading ? <Loading /> : <Table currencies={currencies} />}
       {/* <Pagination /> */}
     </>
   );
