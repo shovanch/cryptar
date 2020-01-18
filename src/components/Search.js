@@ -3,7 +3,7 @@ import SearchIcon from "../assets/images/search.svg";
 
 const Search = () => (
   <form className="header-search">
-    <button className="header-search__button">
+    <button type="button" className="header-search__button">
       <img src={SearchIcon} alt="" />
     </button>
     <input

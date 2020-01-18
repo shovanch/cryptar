@@ -6,9 +6,9 @@ import { ReactComponent as Twitter } from "../../assets/images/twitter.svg";
 import { ReactComponent as Linkedin } from "../../assets/images/linkedin.svg";
 
 const Footer = () => (
-  <footer class="footer">
+  <footer className="footer">
     <h1>Made with ☕ and 💛🧡 by Shovan Chatterjee</h1>
-    <div class="footer-links">
+    <div className="footer-links">
       <a href="#">
         <Mail className="footer-icon" />
       </a>

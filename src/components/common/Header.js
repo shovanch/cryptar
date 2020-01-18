@@ -1,7 +1,7 @@
 import React from "react";
-import Search from "../Search";
 import { ReactComponent as LightBtn } from "assets/images/sun.svg";
 import { ReactComponent as DarkBtn } from "assets/images/moon.svg";
+import Search from "../Search";
 
 const Header = () => (
   <header className="header">
@@ -9,9 +9,9 @@ const Header = () => (
       CrypTr.
     </a>
     <Search />
-    <button className="mode-button">
+    <button type="button" className="mode-button">
       {/* <DarkBtn class="mode-icon" /> */}
-      <LightBtn class="mode-icon" />
+      <LightBtn className="mode-icon" />
     </button>
   </header>
 );
