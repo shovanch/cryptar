@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 
+import CurrencyListContext from "components/CurrencyListContext";
 import Table from "components/Table";
 import Pagination from "components/Pagination";
 import Loading from "components/Loading";
@@ -11,6 +12,19 @@ const HomeView = () => {
   const [currencies, setCurrencies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(null);
+
+  const currencyList = useContext(CurrencyListContext);
+
+  // console.log(currencyList.slice(0, 20)
+
+  useEffect(() => {
+    console.log(
+      currencyList
+        .slice(0, 20)
+        .map(i => i.id)
+        .join(",")
+    );
+  }, [currencyList]);
 
   useEffect(() => {
     const fetchCurrencies = () => {

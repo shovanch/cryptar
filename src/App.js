@@ -1,5 +1,4 @@
-/* eslint-disable react/prefer-stateless-function */
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Header from "components/common/Header";
 import Footer from "components/common/Footer";
@@ -7,10 +6,29 @@ import HomeView from "components/HomeView";
 import CoinView from "components/CoinView";
 import NotFound from "components/NotFound";
 import Loading from "components/Loading";
+import { CurrencyListProvider } from "components/CurrencyListContext";
 
-class App extends Component {
-  render() {
-    return (
+import axios from "axios";
+
+import { API_URL, API_KEY } from "./config";
+
+const App = () => {
+  const [currencyList, setCurrencyList] = useState([]);
+
+  useEffect(() => {
+    const fetchCurrencyList = () => {
+      const url = `${API_URL}/currencies?key=${API_KEY}&attributes=id,name`;
+      axios.get(url).then(res => {
+        const { data } = res;
+        setCurrencyList(data);
+      });
+    };
+
+    fetchCurrencyList();
+  }, []);
+
+  return (
+    <CurrencyListProvider value={currencyList}>
       <BrowserRouter>
         <div className="container">
           <Header />
@@ -27,8 +45,8 @@ class App extends Component {
           <Footer />
         </div>
       </BrowserRouter>
-    );
-  }
-}
+    </CurrencyListProvider>
+  );
+};
 
 export default App;
