@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useState } from "react";
 
-import { API_URL, API_KEY } from "../config";
-
-const CurrencyListContext = React.createContext([]);
-
-export const CurrencyListConsumer = CurrencyListContext.Consumer;
+const CurrencyListContext = React.createContext({
+  dark: false,
+  toggle: () => {}
+});
 
 export const CurrencyListProvider = props => {
   const [currencyList, setCurrencyList] = useState([]);
@@ -22,11 +20,8 @@ export const CurrencyListProvider = props => {
     fetchCurrencyList();
   }, []);
 
-  return (
-    <CurrencyListContext.Provider value={currencyList}>
-      {props.children}
-    </CurrencyListContext.Provider>
-  );
+  return <CurrencyList.Provider vla></CurrencyList.Provider>;
 };
+export const CurrencyListConsumer = CurrencyListContext.Consumer;
 
 export default CurrencyListContext;

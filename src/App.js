@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Header from "components/common/Header";
 import Footer from "components/common/Footer";
@@ -8,27 +8,23 @@ import NotFound from "components/NotFound";
 import Loading from "components/Loading";
 import { CurrencyListProvider } from "components/CurrencyListContext";
 
-import axios from "axios";
-
-import { API_URL, API_KEY } from "./config";
-
 const App = () => {
-  const [currencyList, setCurrencyList] = useState([]);
+  // const [currencyList, setCurrencyList] = useState([]);
 
-  useEffect(() => {
-    const fetchCurrencyList = () => {
-      const url = `${API_URL}/currencies?key=${API_KEY}&attributes=id,name`;
-      axios.get(url).then(res => {
-        const { data } = res;
-        setCurrencyList(data);
-      });
-    };
+  // useEffect(() => {
+  //   const fetchCurrencyList = () => {
+  //     const url = `${API_URL}/currencies?key=${API_KEY}&attributes=id,name`;
+  //     axios.get(url).then(res => {
+  //       const { data } = res;
+  //       setCurrencyList(data);
+  //     });
+  //   };
 
-    fetchCurrencyList();
-  }, []);
+  //   fetchCurrencyList();
+  // }, []);
 
   return (
-    <CurrencyListProvider value={currencyList}>
+    <CurrencyListProvider>
       <BrowserRouter>
         <div className="container">
           <Header />
