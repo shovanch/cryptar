@@ -9,20 +9,17 @@ const Footer = () => (
   <footer className="footer">
     <h1>Made with ☕ and 💛🧡 by Shovan Chatterjee</h1>
     <div className="footer-links">
-      <a href="#">
+      <a href="mailto:hello@shovanch.com">
         <Mail className="footer-icon" />
       </a>
-      <a href="#">
+      <a href="https://github.com/shovanch">
         <Github className="footer-icon" />
-        {/* <img src={github} alt="" /> */}
       </a>
-      <a href="#">
+      <a href="https://twitter.com/shovan_ch/">
         <Twitter className="footer-icon" />
-        {/* <img src={twitter} alt="" /> */}
       </a>
-      <a href="#">
+      <a href="https://www.linkedin.com/in/shovanch/">
         <Linkedin className="footer-icon" />
-        {/* <img src={linkedin} alt="" /> */}
       </a>
     </div>
   </footer>
