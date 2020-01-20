@@ -78,27 +78,6 @@ const HomeView = () => {
       )}
     </>
   );
-
-  // return (
-  //   <>
-  //     {isLoading && currencyListLoaded ? (
-  //       <Loading />
-  //     ) : (
-  //       <>
-  //         <Table currencies={currencies} />
-  //         <Pagination />
-  //       </>
-  //     )}
-  //   </>
-  // );
 };
-
-// return (
-//   <>
-//     {isLoading ? <Loading /> : <Table currencies={currencies} />}
-//     <Pagination />
-//   </>
-// );
-//};
 
 export default HomeView;
