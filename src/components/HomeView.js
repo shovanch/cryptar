@@ -14,7 +14,9 @@ const HomeView = () => {
   const [isError, setIsError] = useState(null);
 
   const currencyList = useContext(CurrencyListContext);
-
+  const page = 2;
+  const startIndex = (page - 1) * 10 * 2;
+  const end = startIndex + 19;
   // console.log(currencyList.slice(0, 20)
 
   useEffect(() => {
@@ -24,6 +26,7 @@ const HomeView = () => {
         .map(i => i.id)
         .join(",")
     );
+    console.log(`${startIndex} - ${end}`);
   }, [currencyList]);
 
   useEffect(() => {

@@ -7,6 +7,7 @@ import CoinView from "components/CoinView";
 import NotFound from "components/NotFound";
 import { CurrencyListProvider } from "components/CurrencyListContext";
 import { ThemeProvider } from "components/ThemeContext";
+import Loading from "components/Loading";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
                 <Route path="/" component={HomeView} exact />
                 <Route path="/currency/:id" component={CoinView} exact />
                 <Route path="/notfound" component={NotFound} exact />
+                <Route path="/load" component={Loading} exact />
                 <Route component={NotFound} />
               </Switch>
             </div>
