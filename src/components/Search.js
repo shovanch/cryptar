@@ -31,7 +31,7 @@ const Search = ({ history }) => {
         <SearchIcon className="search-icon" />
       </button>
       <input
-        type="text"
+        type="search"
         name="coinname"
         className="header-search__input"
         placeholder="Search cryptocurrency"

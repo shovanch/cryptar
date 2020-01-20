@@ -35,7 +35,7 @@ const CoinInfo = ({ currency }) => {
         <div className="coin-detail__box">
           <h3 className="coin-detail__box-label">Change 1D</h3>
           <h1 className="coin-detail__box-info">
-            {curr["1d"].price_change_pct}%
+            {curr["1d"] ? `${curr["1d"].price_change_pct}%` : ""}
           </h1>
 
           <Activity className="coin-detail__box-img" />
@@ -66,7 +66,7 @@ const CoinInfo = ({ currency }) => {
           <div className="coin-detail__text">
             <h2 className="coin-detail__text-label">Change this year</h2>
             <h1 className="coin-detail__text-info">
-              {curr.ytd.price_change_pct}%
+              {curr.ytd ? `${curr.ytd.price_change_pct}%` : ""}
             </h1>
           </div>
         </div>

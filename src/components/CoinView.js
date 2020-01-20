@@ -32,7 +32,7 @@ const CoinView = ({ match }) => {
     };
 
     fetchCurrencies();
-  }, []);
+  }, [currId]);
 
   if (isError) return <NotFound />;
 

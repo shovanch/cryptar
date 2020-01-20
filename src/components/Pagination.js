@@ -1,12 +1,23 @@
 import React from "react";
 
-const Pagination = () => (
+const Pagination = ({ pageCount, handlePaginationClick }) => (
   <div className="pagination">
-    <button className="pagination-button" disabled>
+    <button
+      type="button"
+      className="pagination-button"
+      onClick={() => handlePaginationClick("prev")}
+      disabled={pageCount <= 1}
+    >
       &#10229;
     </button>
-    <span className="pagination-info">Page 1</span>
-    <button className="pagination-button">&#10230;</button>
+    <span className="pagination-info">Page {pageCount}</span>
+    <button
+      type="button"
+      onClick={() => handlePaginationClick("next")}
+      className="pagination-button"
+    >
+      &#10230;
+    </button>
   </div>
 );
 

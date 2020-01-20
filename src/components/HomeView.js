@@ -9,30 +9,36 @@ import NotFound from "components/NotFound";
 import { API_URL, API_KEY } from "../config";
 
 const HomeView = () => {
-  const [currencies, setCurrencies] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [isError, setIsError] = useState(null);
-
-  const currencyList = useContext(CurrencyListContext);
-  const page = 2;
-  const startIndex = (page - 1) * 10 * 2;
-  const end = startIndex + 19;
-  // console.log(currencyList.slice(0, 20)
+  const { currencyList, currencyListLoaded } = useContext(CurrencyListContext);
+  const [pageCount, setPageCount] = useState(1);
+  const [currencyArr, setCurrencyArr] = useState("");
 
   useEffect(() => {
-    console.log(
-      currencyList
-        .slice(0, 20)
-        .map(i => i.id)
-        .join(",")
-    );
-    console.log(`${startIndex} - ${end}`);
-  }, [currencyList]);
+    const startIndex = (pageCount - 1) * 10 * 2;
+    const endIndex = startIndex + 20;
+    const str = currencyList
+      .slice(startIndex, endIndex)
+      .map(i => i.id)
+      .join(",");
+    setCurrencyArr(str);
+  }, [currencyList, pageCount, currencyListLoaded]);
+
+  const handlePaginationClick = direction => {
+    if (direction === "next") {
+      setPageCount(pageCount + 1);
+    } else {
+      setPageCount(pageCount - 1);
+    }
+  };
+
+  const [currencies, setCurrencies] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(null);
 
   useEffect(() => {
     const fetchCurrencies = () => {
-      setIsLoading(true);
-      const url = `${API_URL}/currencies/ticker?key=${API_KEY}&ids=BTC,ETH,XRP`;
+      // setIsLoading(true);
+      const url = `${API_URL}/currencies/ticker?key=${API_KEY}&ids=${currencyArr}`;
       axios
         .get(url)
         .then(res => {
@@ -46,17 +52,53 @@ const HomeView = () => {
         });
     };
 
-    fetchCurrencies();
-  }, []);
+    if (currencyArr.length > 0) {
+      fetchCurrencies();
+    }
+  }, [currencyArr]);
 
   if (isError) return <NotFound />;
 
+  if (!currencyListLoaded) {
+    return <Loading />;
+  }
+
   return (
     <>
-      {isLoading ? <Loading /> : <Table currencies={currencies} />}
-      {/* <Pagination /> */}
+      {isLoading && currencyListLoaded ? (
+        <Loading />
+      ) : (
+        <>
+          <Table currencies={currencies} />
+          <Pagination
+            handlePaginationClick={handlePaginationClick}
+            pageCount={pageCount}
+          />
+        </>
+      )}
     </>
   );
+
+  // return (
+  //   <>
+  //     {isLoading && currencyListLoaded ? (
+  //       <Loading />
+  //     ) : (
+  //       <>
+  //         <Table currencies={currencies} />
+  //         <Pagination />
+  //       </>
+  //     )}
+  //   </>
+  // );
 };
+
+// return (
+//   <>
+//     {isLoading ? <Loading /> : <Table currencies={currencies} />}
+//     <Pagination />
+//   </>
+// );
+//};
 
 export default HomeView;
