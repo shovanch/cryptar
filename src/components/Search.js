@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { withRouter } from "react-router-dom";
 import CurrencyListContext from "components/CurrencyListContext";
-import SearchIcon from "../assets/images/search.svg";
+import { ReactComponent as SearchIcon } from "../assets/images/search.svg";
 
 const Search = ({ history }) => {
   const currencyList = useContext(CurrencyListContext);
@@ -28,7 +28,7 @@ const Search = ({ history }) => {
   return (
     <form className="header-search" onSubmit={searchCurrency}>
       <button type="button" className="header-search__button">
-        <img src={SearchIcon} alt="" />
+        <SearchIcon className="search-icon" />
       </button>
       <input
         type="text"

@@ -16,8 +16,12 @@ const Header = () => {
       </Link>
       <Search />
       <button type="button" className="mode-button" onClick={() => toggle()}>
-        <DarkBtn className={`mode-icon ${isDark ? "" : "active"}`} />
-        <LightBtn className={`mode-icon ${!isDark ? "" : "active"}`} />
+        <DarkBtn
+          className={`mode-icon mode-icon--dark ${isDark ? "" : "active"}`}
+        />
+        <LightBtn
+          className={`mode-icon mode-icon--light ${!isDark ? "" : "active"}`}
+        />
       </button>
     </header>
   );

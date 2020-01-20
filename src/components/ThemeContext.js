@@ -7,12 +7,12 @@ const ThemeContext = React.createContext({
 
 // Styles
 const lightTheme = [
-  "--bg-color: #f0f6fb",
+  "--bg-color: #fff",
   "--primary-text-color: #000",
   "--primary-text-background: #fff",
   "--heading: #000",
   "--loading: #333",
-  "--search: #fff",
+  "--search: #EfEfEf",
   "--shadow: #e4e9ede6"
 ];
 
@@ -22,8 +22,8 @@ const darkTheme = [
   "--primary-text-background: #191a1d",
   "--heading: #a0a0a0",
   "--loading: #dcdddd",
-  "--search: #17171a",
-  "--shadow: #0c0c0ce"
+  "--search: #1f1f1f",
+  "--shadow: #0c0c0c"
 ];
 
 export const ThemeProvider = props => {
