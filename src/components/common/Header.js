@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <header className="header">
       <Link to="/" className="header-logo">
-        CrypTra.
+        CrypTar.
       </Link>
       <Search />
       <button type="button" className="mode-button" onClick={() => toggle()}>

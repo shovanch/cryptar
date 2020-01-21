@@ -4,7 +4,7 @@ import CurrencyListContext from "components/CurrencyListContext";
 import { ReactComponent as SearchIcon } from "../assets/images/search.svg";
 
 const Search = ({ history }) => {
-  const currencyList = useContext(CurrencyListContext);
+  const { currencyList } = useContext(CurrencyListContext);
 
   // Get id of the searched cuurency from the currencyList array of objects
   const findCurrencyId = (value, arr) => {
@@ -13,6 +13,7 @@ const Search = ({ history }) => {
       return currObj.id;
     }
   };
+
   // Handle the search function
   const searchCurrency = e => {
     e.preventDefault();
@@ -31,7 +32,7 @@ const Search = ({ history }) => {
         <SearchIcon className="search-icon" />
       </button>
       <input
-        type="search"
+        type="text"
         name="coinname"
         className="header-search__input"
         placeholder="Search cryptocurrency"

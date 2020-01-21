@@ -36,6 +36,7 @@ body {
     align-items: center;
     justify-content: space-between;
     background-color: var(--search);
+    border-radius: 5px;
     // box-shadow: 0 4px 30px var(--shadow);
 
     @media screen and (max-width: 600px) {
@@ -52,7 +53,6 @@ body {
     background-color: inherit;
     width: 100%;
     border: none;
-    border-radius: 7px;
     font-family: inherit;
     font-size: 1.8rem;
     outline: 0;

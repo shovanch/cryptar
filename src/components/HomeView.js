@@ -9,7 +9,10 @@ import NotFound from "components/NotFound";
 import { API_URL, API_KEY } from "../config";
 
 const HomeView = () => {
-  const { currencyList, currencyListLoaded } = useContext(CurrencyListContext);
+  const { currencyList, currencyListLoaded, hasError } = useContext(
+    CurrencyListContext
+  );
+  // Handle pagination states
   const [pageCount, setPageCount] = useState(1);
   const [currencyArr, setCurrencyArr] = useState("");
 
@@ -31,25 +34,18 @@ const HomeView = () => {
     }
   };
 
+  // Handle the currencies-API call on home
   const [currencies, setCurrencies] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [isError, setIsError] = useState(null);
 
   useEffect(() => {
-    const fetchCurrencies = () => {
-      // setIsLoading(true);
+    const fetchCurrencies = async () => {
       const url = `${API_URL}/currencies/ticker?key=${API_KEY}&ids=${currencyArr}`;
-      axios
-        .get(url)
-        .then(res => {
-          setIsLoading(false);
-          const { data } = res;
-          setCurrencies(data);
-        })
-        .catch(error => {
-          setIsError(true);
-          setIsLoading(false);
-        });
+
+      const res = await axios.get(url);
+      setIsLoading(false);
+      const { data } = res;
+      setCurrencies(data);
     };
 
     if (currencyArr.length > 0) {
@@ -57,8 +53,13 @@ const HomeView = () => {
     }
   }, [currencyArr]);
 
-  if (isError) return <NotFound />;
+  /* If error happens in getting currencyList on context,
+      display  notfound */
+  if (hasError) return <NotFound />;
 
+  /* Get the loaded value from context,
+    if currencyList context is not set, keep displaying loading on home
+    (Without currencyList value, API call can't be made on HomeView) */
   if (!currencyListLoaded) {
     return <Loading />;
   }
