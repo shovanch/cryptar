@@ -1,8 +1,8 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
-const Table = ({ currencies, history }) => {
-  console.log("LOADING TABLE");
+const Table = ({ currencies }) => {
+  let history = useHistory();
   return (
     <table className="table">
       <thead className="table-header">
@@ -57,4 +57,4 @@ const Table = ({ currencies, history }) => {
   );
 };
 
-export default withRouter(Table);
+export default Table;

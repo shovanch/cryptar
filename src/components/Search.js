@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-import { withRouter } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import CurrencyListContext from "components/CurrencyListContext";
 import { ReactComponent as SearchIcon } from "../assets/images/search.svg";
 
-const Search = ({ history }) => {
+const Search = () => {
   const { currencyList } = useContext(CurrencyListContext);
-
+  let history = useHistory();
   // Get id of the searched cuurency from the currencyList array of objects
   const findCurrencyId = (value, arr) => {
     const currObj = arr.find(obj => obj.id === value);
@@ -41,4 +41,4 @@ const Search = ({ history }) => {
   );
 };
 
-export default withRouter(Search);
+export default Search;

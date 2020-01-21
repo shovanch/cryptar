@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import axios from "axios";
 import CoinInfo from "components/CoinInfo";
@@ -7,12 +7,12 @@ import Loading from "components/Loading";
 import NotFound from "components/NotFound";
 import { API_URL, API_KEY } from "../config";
 
-const CoinView = ({ match }) => {
+const CoinView = () => {
   const [currency, setCurrency] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(null);
 
-  const currId = match.params.id;
+  let { currId } = useParams();
 
   useEffect(() => {
     const fetchCurrencies = () => {
