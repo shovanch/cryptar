@@ -22,10 +22,10 @@ const App = () => {
                 {/* <Route path="/notfound" component={Error} exact />
                 <Route component={Error} /> */}
                 <Route path="/notfound" exact>
-                  <Error errText="Page not found" />
+                  <Error errText="Currency not found" />
                 </Route>
                 <Route>
-                  <Error errText="Page not found" />
+                  <Error />
                 </Route>
               </Switch>
             </div>

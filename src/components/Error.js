@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+
 import errorImg from "../assets/images/error.png";
 
-const Error = ({ errText }) => (
+const Error = ({ errText = "page not found" }) => (
   <div className="error">
     <div className="error-text">
       <h1>{errText}</h1>
@@ -13,5 +15,9 @@ const Error = ({ errText }) => (
     </div>
   </div>
 );
+
+Error.propTypes = {
+  errText: PropTypes.string
+};
 
 export default Error;

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Pagination = ({ pageCount, handlePaginationClick }) => (
   <div className="pagination">
@@ -10,7 +11,10 @@ const Pagination = ({ pageCount, handlePaginationClick }) => (
     >
       &#10229;
     </button>
-    <span className="pagination-info">Page {pageCount}</span>
+    <span className="pagination-info">
+      Page
+      {pageCount}
+    </span>
     <button
       type="button"
       onClick={() => handlePaginationClick("next")}
@@ -20,5 +24,10 @@ const Pagination = ({ pageCount, handlePaginationClick }) => (
     </button>
   </div>
 );
+
+Pagination.propTypes = {
+  pageCount: PropTypes.number.isRequired,
+  handlePaginationClick: PropTypes.func.isRequired
+};
 
 export default Pagination;

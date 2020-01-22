@@ -1,5 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const Table = ({ currencies }) => {
   let history = useHistory();
@@ -57,4 +58,7 @@ const Table = ({ currencies }) => {
   );
 };
 
+Table.propTypes = {
+  currencies: PropTypes.arrayOf(PropTypes.object).isRequired
+};
 export default Table;
