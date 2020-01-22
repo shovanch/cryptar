@@ -12,16 +12,31 @@ const Footer = () => (
       <a href="mailto:hello@shovanch.com">
         <Mail className="footer-icon" />
       </a>
-      <a href="https://github.com/shovanch">
+      <a
+        href="https://github.com/shovanch"
+        target="blank"
+        rel="noopener noreferrer"
+      >
         <Github className="footer-icon" />
       </a>
-      <a href="https://twitter.com/shovan_ch/">
+      <a
+        href="https://twitter.com/shovan_ch/"
+        target="blank"
+        rel="noopener noreferrer"
+      >
         <Twitter className="footer-icon" />
       </a>
-      <a href="https://www.linkedin.com/in/shovanch/">
+      <a
+        href="https://www.linkedin.com/in/shovanch/"
+        target="blank"
+        rel="noopener noreferrer"
+      >
         <Linkedin className="footer-icon" />
       </a>
     </div>
+    <a href="https://nomics.com" target="blank" rel="noopener noreferrer">
+      Crypto Market Cap & Pricing Data Provided By Nomics
+    </a>
   </footer>
 );
 
