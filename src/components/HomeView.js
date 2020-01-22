@@ -5,7 +5,7 @@ import CurrencyListContext from "components/CurrencyListContext";
 import Table from "components/Table";
 import Pagination from "components/Pagination";
 import Loading from "components/Loading";
-import NotFound from "components/NotFound";
+import Error from "components/Error";
 import { API_URL, API_KEY } from "../config";
 
 const HomeView = () => {
@@ -55,7 +55,7 @@ const HomeView = () => {
 
   /* If error happens in getting currencyList on context,
       display  notfound */
-  if (hasError) return <NotFound />;
+  if (hasError) return <Error errText="UH OH! Error Happened" />;
 
   /* Get the loaded value from context,
     if currencyList context is not set, keep displaying loading on home

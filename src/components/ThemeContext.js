@@ -13,7 +13,7 @@ const lightTheme = [
   "--heading: #000",
   "--loading: #333",
   "--search: #EfEfEf",
-  "--shadow: #e4e9ede6"
+  "--shadow: #d2d2d2"
 ];
 
 const darkTheme = [

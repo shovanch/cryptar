@@ -4,7 +4,7 @@ import Header from "components/common/Header";
 import Footer from "components/common/Footer";
 import HomeView from "components/HomeView";
 import CoinView from "components/CoinView";
-import NotFound from "components/NotFound";
+import Error from "components/Error";
 import { CurrencyListProvider } from "components/CurrencyListContext";
 import { ThemeProvider } from "components/ThemeContext";
 
@@ -19,8 +19,14 @@ const App = () => {
               <Switch>
                 <Route path="/" component={HomeView} exact />
                 <Route path="/currency/:currId" component={CoinView} exact />
-                <Route path="/notfound" component={NotFound} exact />
-                <Route component={NotFound} />
+                {/* <Route path="/notfound" component={Error} exact />
+                <Route component={Error} /> */}
+                <Route path="/notfound" exact>
+                  <Error errText="Page not found" />
+                </Route>
+                <Route>
+                  <Error errText="Page not found" />
+                </Route>
               </Switch>
             </div>
             <Footer />

@@ -37,7 +37,6 @@ body {
     justify-content: space-between;
     background-color: var(--search);
     border-radius: 5px;
-    // box-shadow: 0 4px 30px var(--shadow);
 
     @media screen and (max-width: 600px) {
       & {
@@ -71,14 +70,10 @@ body {
   height: 1.8rem;
 }
 
-// * {
-//   outline: 1px solid red;
-// }
 .mode-button {
   border: none;
   cursor: pointer;
   outline: none;
-  // background-color: var(--search);
   background-color: transparent;
   border-radius: 5px;
   padding: 3px;
@@ -103,7 +98,6 @@ body {
   border-spacing: 0 1rem;
 
   & th {
-    // color: #333333e6;
     color: var(--loading);
     font-size: 1.8rem;
     font-weight: 500;
@@ -116,8 +110,6 @@ body {
   }
 
   & td {
-    // height: 3rem;
-    // padding: 3.5rem 1rem;
     padding: 2.2rem 1rem;
     color: var(--heading);
     font-family: var(--secondary-font);
@@ -185,7 +177,6 @@ body {
 .btn-back {
   padding: 0.5rem 1rem;
   border: none;
-  // background-color: #fff;
   border-radius: 5px;
   color: var(--heading);
   cursor: pointer;
@@ -205,12 +196,10 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 5rem;
-  // justify-content: space-between;
 
   @media screen and (max-width: 650px) {
     & {
       justify-content: space-between;
-      // margin-top: 3rem;
     }
   }
 }
@@ -222,26 +211,24 @@ body {
   padding: 2rem 3rem;
   background-color: var(--primary-text-background);
   border-radius: 5px;
-  box-shadow: 0px 4px 30px var(--shadow);
+  box-shadow: 0px 2px 20px var(--shadow);
 
   @media screen and (max-width: 650px) {
     & {
       flex-basis: 100%;
-      // margin-top: 3rem;
     }
   }
 }
 
 .coin-detail__box--middle {
   flex-basis: 40%;
-  margin-right: 2rem;
-  margin-left: 5rem;
+  margin-right: 3rem;
+  margin-left: 3rem;
 
   @media screen and (max-width: 650px) {
     & {
       flex-basis: 100%;
       margin: 2rem 0;
-      // margin-top: 3rem;
     }
   }
 }
@@ -306,20 +293,24 @@ body {
   display: flex;
   justify-content: space-around;
 
-  .error-img {
-    height: 35rem;
+  &-img {
+    flex-basis: 40%;
 
-    @media screen and (max-width: 500px) {
-      height: 25rem;
+    img {
+      height: 35rem;
+      @media screen and (max-width: 500px) {
+        height: 25rem;
+      }
     }
   }
 
-  .error-text {
+  &-text {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     h1 {
       font-size: 4.8rem;
+      text-transform: uppercase;
     }
     a {
       font-size: 2.8rem;
