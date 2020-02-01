@@ -121,6 +121,19 @@ body {
     background-color: var(--table-row-background);
     border-radius: 5px;
   }
+
+  & img {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .table {
+    .collapsable {
+      display: none;
+    }
+  }
 }
 
 .pagination {

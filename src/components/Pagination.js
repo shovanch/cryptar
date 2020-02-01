@@ -11,10 +11,7 @@ const Pagination = ({ pageCount, handlePaginationClick }) => (
     >
       &#10229;
     </button>
-    <span className="pagination-info">
-      Page
-      {pageCount}
-    </span>
+    <span className="pagination-info">{pageCount}</span>
     <button
       type="button"
       onClick={() => handlePaginationClick("next")}

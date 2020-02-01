@@ -9,10 +9,11 @@ const Table = ({ currencies }) => {
       <thead className="table-header">
         <tr>
           <th>#</th>
+          <th>Logo</th>
           <th>Symbol</th>
-          <th>Name</th>
+          <th>Currency</th>
           <th>Price</th>
-          <th>Market Cap</th>
+          <th className="collapsable">Market Cap</th>
           <th>Change 1D</th>
           <th>Change 30D</th>
         </tr>
@@ -25,7 +26,11 @@ const Table = ({ currencies }) => {
             onClick={() => history.push(`currency/${currency.id}`)}
           >
             <td>{currency.rank}</td>
+            <td>
+              <img src={currency.logo_url} alt={`${currency.name} logo`} />
+            </td>
             <td>{currency.symbol}</td>
+
             <td>{currency.name}</td>
             <td>
               $
@@ -34,7 +39,7 @@ const Table = ({ currencies }) => {
               }).format(currency.price)}
             </td>
             {/* <td>${Number.parseFloat(currency.price).toFixed(3)}</td> */}
-            <td>
+            <td className="collapsable">
               $
               {Intl.NumberFormat({
                 minimumFractionDigits: 2
