@@ -1,2 +1,8 @@
-# crypto-tracker
-CrypD - A cryptocurrency tracker project
+# 📈 CrypTar
+Track cryptocurrencies
+
+### Installation
+
+### Usage
+
+

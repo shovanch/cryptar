@@ -35,7 +35,7 @@ body {
     flex-basis: 35%;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--search);
+    background-color: var(--search-box);
     border-radius: 5px;
 
     @media screen and (max-width: 600px) {
@@ -118,7 +118,7 @@ body {
   }
   & tr {
     padding: 2.5rem 1rem;
-    background-color: var(--primary-text-background);
+    background-color: var(--table-row-background);
     border-radius: 5px;
   }
 }
