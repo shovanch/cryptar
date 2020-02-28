@@ -7,7 +7,7 @@ const ThemeContext = React.createContext({
 
 // Styles
 const lightTheme = [
-  "--primary-bg-color: #fff",
+  "--bg-color: #fff",
   "--primary-text-color: #000",
   "--primary-text-background: #fff",
   "--table-row-background: #f9f9f9",
@@ -55,14 +55,13 @@ export const ThemeProvider = props => {
     if (lastThemeDark === "true") {
       setIsDark(true);
       applyTheme(darkTheme);
-    }
-
-    if (lastThemeDark === "false") {
+    } else if (lastThemeDark === "false") {
       setIsDark(false);
+      applyTheme(lightTheme);
+    } else {
       applyTheme(lightTheme);
     }
 
-    applyTheme(lightTheme);
     // if theme changers, repaint the app
   }, [isDark]);
 
