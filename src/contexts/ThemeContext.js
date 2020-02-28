@@ -61,6 +61,8 @@ export const ThemeProvider = props => {
       setIsDark(false);
       applyTheme(lightTheme);
     }
+
+    applyTheme(lightTheme);
     // if theme changers, repaint the app
   }, [isDark]);
 

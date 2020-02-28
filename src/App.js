@@ -5,8 +5,8 @@ import Footer from "components/common/Footer";
 import HomeView from "components/HomeView";
 import CoinView from "components/CoinView";
 import Error from "components/Error";
-import { CurrencyListProvider } from "components/CurrencyListContext";
-import { ThemeProvider } from "components/ThemeContext";
+import { CurrencyListProvider } from "contexts/CurrencyListContext";
+import { ThemeProvider } from "contexts/ThemeContext";
 
 const App = () => {
   return (

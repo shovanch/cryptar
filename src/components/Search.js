@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
-import CurrencyListContext from "components/CurrencyListContext";
+import CurrencyListContext from "contexts/CurrencyListContext";
 import { ReactComponent as SearchIcon } from "../assets/images/search.svg";
 
 const Search = () => {

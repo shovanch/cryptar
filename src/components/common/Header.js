@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
-import ThemeContext from "components/ThemeContext";
+import ThemeContext from "contexts/ThemeContext";
 import { ReactComponent as LightBtn } from "assets/images/sun.svg";
 import { ReactComponent as DarkBtn } from "assets/images/moon.svg";
 import Search from "../Search";

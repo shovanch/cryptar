@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 
-import CurrencyListContext from "components/CurrencyListContext";
+import CurrencyListContext from "contexts/CurrencyListContext";
 import Table from "components/Table";
 import Pagination from "components/Pagination";
 import Loading from "components/Loading";

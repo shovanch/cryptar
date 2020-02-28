@@ -15,7 +15,7 @@ const Table = ({ currencies }) => {
           <th>Price</th>
           <th className="collapsable">Market Cap</th>
           <th>Change 1D</th>
-          <th>Change 30D</th>
+          <th className="collapsable">Change 30D</th>
         </tr>
       </thead>
       <tbody className="table-body">
@@ -51,7 +51,7 @@ const Table = ({ currencies }) => {
                 {currency["1d"] ? `${currency["1d"].price_change_pct}%` : ""}
               </span>
             </td>
-            <td>
+            <td className="collapsable">
               <span className="percent-down">
                 {currency["30d"] ? `${currency["30d"].price_change_pct}%` : ""}
               </span>
