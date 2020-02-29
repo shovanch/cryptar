@@ -7,7 +7,7 @@ const Pagination = ({ pageCount, handlePaginationClick }) => (
       type="button"
       className="pagination-button"
       onClick={() => handlePaginationClick("prev")}
-      disabled={pageCount <= 1}
+      disabled={pageCount <= 1} // Prevent going to page lower than 1
     >
       &#10229;
     </button>

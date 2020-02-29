@@ -4,7 +4,7 @@ import axios from "axios";
 import CurrencyListContext from "contexts/CurrencyListContext";
 import Table from "components/Table";
 import Pagination from "components/Pagination";
-import Loading from "components/Loading";
+import LoadingSpinner from "components/LoadingSpinner";
 import Error from "components/Error";
 import { API_URL, API_KEY } from "../config";
 
@@ -17,15 +17,19 @@ const HomeView = () => {
   const [currencyArr, setCurrencyArr] = useState("");
 
   useEffect(() => {
+    // Slice the currency list from currencyList context, based on page number
     const startIndex = (pageCount - 1) * 10 * 2;
-    const endIndex = startIndex + 20;
-    const str = currencyList
+    const endIndex = startIndex + 15;
+
+    const currencyStr = currencyList
       .slice(startIndex, endIndex)
       .map(i => i.id)
       .join(",");
-    setCurrencyArr(str);
+
+    setCurrencyArr(currencyStr);
   }, [currencyList, pageCount, currencyListLoaded]);
 
+  // Function to chan ge pages
   const handlePaginationClick = direction => {
     if (direction === "next") {
       setPageCount(pageCount + 1);
@@ -61,13 +65,13 @@ const HomeView = () => {
     if currencyList context is not set, keep displaying loading on home
     (Without currencyList value, API call can't be made on HomeView) */
   if (!currencyListLoaded) {
-    return <Loading />;
+    return <LoadingSpinner />;
   }
 
   return (
     <>
       {isLoading && currencyListLoaded ? (
-        <Loading />
+        <LoadingSpinner />
       ) : (
         <>
           <Table currencies={currencies} />

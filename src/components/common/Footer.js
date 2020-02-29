@@ -7,7 +7,19 @@ import { ReactComponent as Linkedin } from "../../assets/images/linkedin.svg";
 
 const Footer = () => (
   <footer className="footer">
-    <h1>Made with ☕ and 💛🧡 by Shovan Chatterjee</h1>
+    <h1>
+      Made with
+      <span role="img" aria-label="coffee emoji">
+        {" "}
+        ☕{" "}
+      </span>
+      and
+      <span role="img" aria-label="hearts emoji">
+        {" "}
+        💛🧡{" "}
+      </span>
+      by Shovan Chatterjee
+    </h1>
     <div className="footer-links">
       <a href="mailto:hello@shovanch.com">
         <Mail className="footer-icon" />

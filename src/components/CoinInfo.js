@@ -3,10 +3,8 @@ import { ReactComponent as Award } from "assets/images/award.svg";
 import { ReactComponent as Activity } from "assets/images/activity.svg";
 import { ReactComponent as Dollar } from "assets/images/dollar.svg";
 
-// import coin from "assets/images/coin.png";
-
 const CoinInfo = ({ currency }) => {
-  // Get the first and only element from the passed prop array
+  // Get the first and only element from the passed currency array
   const curr = currency[0];
 
   return (
@@ -46,18 +44,9 @@ const CoinInfo = ({ currency }) => {
         <div className="coin-detail--text">
           <div className="coin-detail__text">
             <h2 className="coin-detail__text-label">Market Cap</h2>
-            {/* <h1 className="coin-detail__text-info">
-              $
-              {Number(curr.market_cap)
-                .toFixed(2)
-                .toLocaleString()}
-            </h1> */}
+
             <h1 className="coin-detail__text-info">
-              {/* {Intl.NumberFormat("en-US", {
-                style: "currency",
-                currency: "USD"
-              }).format(curr.market_cap)} */}
-              $
+              {/* format the currency digits */}$
               {Intl.NumberFormat({
                 minimumFractionDigits: 2
               }).format(curr.market_cap)}
@@ -73,7 +62,6 @@ const CoinInfo = ({ currency }) => {
         <div className="coin-detail--text">
           <div className="coin-detail__text">
             <h2 className="coin-detail__text-label">All-time high price</h2>
-            {/* <h1 className="coin-detail__text-info">${curr.high}</h1> */}
             <h1 className="coin-detail__text-info">
               $
               {Number(curr.high)
@@ -84,6 +72,7 @@ const CoinInfo = ({ currency }) => {
           <div className="coin-detail__text">
             <h2 className="coin-detail__text-label">All-time high date</h2>
             <h1 className="coin-detail__text-info">
+              {/* Pull only dates from the timestamp value */}
               {curr.high_timestamp.split("T")[0]}
             </h1>
           </div>

@@ -38,14 +38,12 @@ const Table = ({ currencies }) => {
                 minimumFractionDigits: 2
               }).format(currency.price)}
             </td>
-            {/* <td>${Number.parseFloat(currency.price).toFixed(3)}</td> */}
             <td className="collapsable">
               $
               {Intl.NumberFormat({
                 minimumFractionDigits: 2
               }).format(currency.market_cap)}
             </td>
-            {/* <td>${Number.parseFloat(currency.market_cap).toFixed(3)}</td> */}
             <td>
               <span className="percent-down">
                 {currency["1d"] ? `${currency["1d"].price_change_pct}%` : ""}

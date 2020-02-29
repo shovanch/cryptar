@@ -11,7 +11,7 @@ const Error = ({ errText = "page not found" }) => (
       <Link to="/">⟵ Go back to home</Link>
     </div>
     <div className="error-img">
-      <img src={errorImg} alt="" />
+      <img src={errorImg} alt="Error Illustration" />
     </div>
   </div>
 );

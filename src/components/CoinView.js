@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 
 import axios from "axios";
 import CoinInfo from "components/CoinInfo";
-import Loading from "components/Loading";
+import LoadingSpinner from "components/LoadingSpinner";
 import Error from "components/Error";
 import { API_URL, API_KEY } from "../config";
 
@@ -34,9 +34,9 @@ const CoinView = () => {
     fetchCurrencies();
   }, [currId]);
 
-  if (isError) return <Error errText="Error happened. Try again" />;
+  if (isError) return <Error errText="Error happened. Try again." />;
 
-  if (isLoading) return <Loading />;
+  if (isLoading) return <LoadingSpinner />;
 
   return (
     <>
